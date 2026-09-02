@@ -634,6 +634,13 @@ ul { list-style: none; }
 .footer__nav a { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; transition: color 0.3s var(--ease); }
 .footer__nav a:hover { color: var(--lilac); }
 .footer__copy { font-size: 0.78rem; letter-spacing: 0.04em; }
+.footer__credit {
+  margin-top: 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lilac);
+}
 
 /* ===================================================================
    WHATSAPP FLUTUANTE
@@ -926,8 +933,34 @@ ul { list-style: none; }
   .pricing__grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
   .price-card--featured { order: -1; }
   .hygiene__tips { grid-template-columns: 1fr; }
-  .gallery__grid { grid-template-columns: 1fr 1fr; }
-  .gallery__item--quote { grid-column: span 2; }
+  /* Galeria vira carrossel deslizável (2 cards por vez) */
+  .gallery__grid {
+    display: flex;
+    grid-template-columns: none;
+    grid-auto-rows: auto;
+    gap: 0.8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1.1rem;
+    scroll-padding-left: 1.2rem;
+  }
+  .gallery__grid::-webkit-scrollbar { height: 4px; }
+  .gallery__grid::-webkit-scrollbar-track { background: var(--cream-2); border-radius: 2px; }
+  .gallery__grid::-webkit-scrollbar-thumb { background: var(--lilac); border-radius: 2px; }
+  .gallery__item,
+  .gallery__item--tall,
+  .gallery__item--quote {
+    flex: 0 0 calc(50% - 0.4rem);
+    height: 300px;
+    grid-row: auto;
+    scroll-snap-align: start;
+  }
+  .gallery__item--quote { padding: 1.4rem; }
+  .gallery__item--quote blockquote p { font-size: 1rem; line-height: 1.35; }
+  .gallery__item--quote cite { font-size: 0.65rem; margin-top: 0.7rem; }
+  .gallery__item figcaption { font-size: 1.1rem; }
+
   .cta__info { gap: 1.8rem 2.5rem; }
   .cta__info > div { flex: 1 1 40%; }
 }
@@ -944,9 +977,10 @@ ul { list-style: none; }
   .marquee-band__inner { gap: 0.6rem 1rem; font-size: 0.66rem; letter-spacing: 0.2em; }
 
   .hygiene__steps { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-  .gallery__grid { grid-template-columns: 1fr; grid-auto-rows: 300px; }
-  .gallery__item--quote { grid-column: span 1; }
-  .gallery__item--quote blockquote p { font-size: 1.2rem; }
+  /* galeria mantém o carrossel definido em 760px; cards um pouco menores */
+  .gallery__item,
+  .gallery__item--tall,
+  .gallery__item--quote { height: 260px; }
 
   .cta__actions { flex-direction: column; align-items: stretch; }
   .cta__actions .btn { width: 100%; }
