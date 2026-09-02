@@ -36,7 +36,16 @@
         <a href="#servicos" class="nav__link">Serviços</a>
         <a href="#precos" class="nav__link">Preços</a>
         <a href="#galeria" class="nav__link">Galeria</a>
-        <a href="#higiene" class="nav__link">Higiene</a>
+        <div class="nav__dd" id="navDd">
+          <button class="nav__link nav__ddbtn" id="navDdBtn" aria-haspopup="true" aria-expanded="false">
+            Higiene
+            <svg class="nav__ddcaret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <div class="nav__ddmenu" role="menu">
+            <a href="higienizacao.html" role="menuitem">Como higienizar meus cílios</a>
+            <a href="#cuidados" role="menuitem">Cuidados pós-aplicação</a>
+          </div>
+        </div>
         <a href="#contato" class="nav__link">Contato</a>
         <a href="#contato" class="btn btn--sm nav__cta">Agendar</a>
       </nav>
@@ -47,27 +56,58 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="inicio">
-    <div class="hero__media">
-      <img src="assets/lash-fox.jpeg" alt="Olhar com extensão de cílios efeito fox eyes" />
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <p class="hero__eyebrow">Lash Designer</p>
-      <h1 class="hero__title">Um olhar que fala<br>antes de você.</h1>
-      <p class="hero__text">
-        Extensão de cílios feita com técnica, higiene e sensibilidade — para realçar
-        a sua beleza natural com um design pensado só para o seu olhar.
-      </p>
-      <div class="hero__actions">
-        <a href="#contato" class="btn btn--light">Agendar horário</a>
-        <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+  <!-- ===== HERO (SLIDESHOW) ===== -->
+  <section class="hero" id="inicio" aria-label="Apresentação">
+    <!-- Slide 1: Marca / logo grande -->
+    <div class="hero__slide hero__slide--brand is-active" data-slide="0">
+      <div class="hero__brand-inner">
+        <img src="assets/logo.png" alt="Victoria Carli Lash Designer" class="hero__brandlogo" />
+        <p class="hero__brandtag">Extensão de Cílios</p>
       </div>
     </div>
-    <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
-      <span></span>
-    </a>
+
+    <!-- Slide 2: Fox Eyes -->
+    <div class="hero__slide hero__slide--photo" data-slide="1">
+      <img class="hero__bg" src="assets/lash-fox.jpeg" alt="Olhar com extensão de cílios efeito fox eyes" />
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Lash Designer</p>
+        <h1 class="hero__title">Um olhar que fala<br>antes de você.</h1>
+        <p class="hero__text">
+          Extensão de cílios feita com técnica, higiene e sensibilidade — para realçar
+          a sua beleza natural com um design pensado só para o seu olhar.
+        </p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--light">Agendar horário</a>
+          <a href="#servicos" class="btn btn--ghost-light">Ver serviços</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Volume Brasileiro -->
+    <div class="hero__slide hero__slide--photo" data-slide="2">
+      <img class="hero__bg" src="assets/lash-brasileiro.jpeg" alt="Extensão de cílios volume brasileiro" />
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Feito para você</p>
+        <h1 class="hero__title">Sua beleza natural,<br>realçada.</h1>
+        <p class="hero__text">
+          Do efeito mais natural ao mais marcante — cada aplicação é pensada para
+          valorizar o seu rosto com conforto e durabilidade.
+        </p>
+        <div class="hero__actions">
+          <a href="#precos" class="btn btn--light">Ver preços</a>
+          <a href="#galeria" class="btn btn--ghost-light">Ver resultados</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <div class="hero__dots" role="tablist" aria-label="Escolher slide">
+      <button class="hero__dot is-active" data-goto="0" aria-label="Slide 1"></button>
+      <button class="hero__dot" data-goto="1" aria-label="Slide 2"></button>
+      <button class="hero__dot" data-goto="2" aria-label="Slide 3"></button>
+    </div>
   </section>
 
   <!-- ===== FAIXA / SELOS ===== -->
@@ -283,71 +323,6 @@
     </div>
   </section>
 
-  <!-- ===== HIGIENE ===== -->
-  <section class="section hygiene" id="higiene">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Passo a passo</p>
-        <h2 class="section-title">Como higienizar<br>meus cílios</h2>
-        <p class="section-sub">
-          A higiene é o segredo para cílios bonitos, saudáveis e duradouros. Faça a limpeza
-          <strong>todos os dias</strong> — leva menos de 2 minutinhos.
-        </p>
-      </div>
-
-      <div class="hygiene__steps">
-        <article class="hygiene-step reveal">
-          <div class="hygiene-step__num">1</div>
-          <h3>Umedeça</h3>
-          <p>Molhe os cílios com água limpa e aplique um pouco de <strong>shampoo próprio para cílios</strong> (foam cleanser). Nunca use sabonete comum ou demaquilante oleoso.</p>
-        </article>
-
-        <article class="hygiene-step reveal">
-          <div class="hygiene-step__num">2</div>
-          <h3>Escove suavemente</h3>
-          <p>Com uma <strong>escovinha macia</strong>, faça movimentos delicados de dentro para fora, limpando a raiz e os fios. Sem esfregar com força.</p>
-        </article>
-
-        <article class="hygiene-step reveal">
-          <div class="hygiene-step__num">3</div>
-          <h3>Enxágue</h3>
-          <p>Retire todo o shampoo com água corrente ou borrifador, garantindo que não sobre resíduo entre os fios.</p>
-        </article>
-
-        <article class="hygiene-step reveal">
-          <div class="hygiene-step__num">4</div>
-          <h3>Seque e penteie</h3>
-          <p>Seque com um jato de ar frio (ventilador ou secador no frio) e finalize <strong>penteando os fios</strong> com a escovinha para alinhar o efeito.</p>
-        </article>
-      </div>
-
-      <div class="hygiene__tips reveal">
-        <div class="hygiene__tips-col">
-          <h4>✓ Pode</h4>
-          <ul>
-            <li>Higienizar diariamente</li>
-            <li>Usar shampoo específico e escovinha macia</li>
-            <li>Secar sempre com ar frio</li>
-            <li>Dormir de barriga para cima</li>
-          </ul>
-        </div>
-        <div class="hygiene__tips-col hygiene__tips-col--no">
-          <h4>✕ Evite</h4>
-          <ul>
-            <li>Produtos com óleo na região dos olhos</li>
-            <li>Coçar, puxar ou dormir com o rosto no travesseiro</li>
-            <li>Cílios sem limpeza (acumula ácaro e bactéria)</li>
-            <li>Máscara de cílios à prova d'água</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="hygiene__note reveal">
-        Ficou com dúvida na hora de limpar? Me manda mensagem que eu te oriento. 💜
-      </p>
-    </div>
-  </section>
-
   <!-- ===== CTA / CONTATO ===== -->
   <section class="section cta" id="contato">
     <div class="container cta__inner reveal">
@@ -385,7 +360,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#precos">Preços</a>
         <a href="#galeria">Galeria</a>
-        <a href="#higiene">Higiene</a>
+        <a href="higienizacao.html">Higienização</a>
         <a href="#contato">Contato</a>
       </nav>
       <p class="footer__copy">© <span id="year"></span> Victoria Carli — Lash Designer. Todos os direitos reservados.</p>
