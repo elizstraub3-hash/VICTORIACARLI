@@ -8,10 +8,10 @@
   --cream-2:     #EFE7E2;
   --ink:         #221F26;
   --ink-soft:    #4B4550;
-  --purple:      #7A5A96;
-  --purple-deep: #5E4478;
-  --lilac:       #C9B6DB;
-  --lilac-soft:  #EBE2F2;
+  --purple:      #9270B2;
+  --purple-deep: #6E5292;
+  --lilac:       #D6C8E6;
+  --lilac-soft:  #F1ECF8;
   --white:       #FFFFFF;
 
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -699,6 +699,13 @@ ul { list-style: none; }
   letter-spacing: 0.01em;
   margin-bottom: 1.4rem;
   line-height: 1.1;
+}
+.price-card__meta {
+  font-size: 0.74rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--purple-deep);
+  margin: -0.7rem 0 1.3rem;
 }
 .price-card__btn { width: 100%; margin-top: auto; }
 
