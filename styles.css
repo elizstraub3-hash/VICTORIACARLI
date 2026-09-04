@@ -276,7 +276,7 @@ ul { list-style: none; }
 .hero__slide--brand {
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, var(--purple-deep) 0%, #2c2333 55%, var(--ink) 100%);
+  background: linear-gradient(135deg, #7B5CA3 0%, #574083 45%, #362A54 100%);
 }
 .hero__brand-inner { position: relative; padding: 6rem 1.5rem; }
 .hero__brandlogo {
@@ -378,7 +378,7 @@ ul { list-style: none; }
   align-items: center;
   text-align: center;
   color: var(--white);
-  background: linear-gradient(135deg, var(--purple-deep) 0%, #2c2333 55%, var(--ink) 100%);
+  background: linear-gradient(135deg, #7B5CA3 0%, #574083 45%, #362A54 100%);
   padding: 8rem 0 4rem;
 }
 .page-hero__inner { max-width: 720px; margin: 0 auto; }
